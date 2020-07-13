@@ -1,0 +1,21 @@
+.header{
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+a{
+	display: inline-block;
+	color: white;
+	font-size: 30px;
+	margin: 15px 50px;
+}
+.links{
+	text-align: center;
+}
+.text{
+	margin-top: 90px;
+	font-size: 20px;
+}
