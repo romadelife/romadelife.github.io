@@ -1,0 +1,29 @@
+.conteiner {
+  background: grey;
+  text-align: center;
+}
+.butt {
+  border: 3px solid white;
+  text-transform: uppercase;
+  padding: 90px 90px;
+  margin: 100px;
+  border-radius: 100px;
+}
+.btn:focus {
+  outline: none;
+}
+.modal {
+  margin-top: 260px;
+}
+.modal-header {
+  background: #B41120;
+}
+h5 {
+  text-transform: uppercase;
+}
+p {
+  font-size: 20px;
+}
+button {
+  text-transform: uppercase;
+}

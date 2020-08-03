@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Самоуничтажение</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+<div class="conteiner">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<button class="btn btn-danger btn-lg butt" data-toggle="modal" data-target="#danger"	>  </button>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="danger" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Самоуничтожение</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Активировать протокол самоуничтожения?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+        <button type="button" class="btn btn-success ">Активация</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
