@@ -1,6 +1,7 @@
 .conteiner {
   background: grey;
   text-align: center;
+  margin-top:50%;
 }
 .butt {
   border: 3px solid white;
