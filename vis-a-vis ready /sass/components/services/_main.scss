@@ -1,0 +1,150 @@
+.services{
+	padding: 180px 0;
+	&-inner{
+		@include site-width;
+	}
+
+	&-title{
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 60px;
+		color: $text-color;
+		&::after{
+			content:"";
+			display: inline-block;
+			height: 3px;
+			width: 70%;
+			margin-left: 26px;
+			vertical-align: 25%;
+			background: $grey-color-2;
+		}
+	}
+
+	&-list{
+		display: flex;
+		margin: 110px 0 118px 130px;
+		position: relative;
+	}
+
+	&-item{
+		width: 19%;
+	}
+
+	&-icon{
+		font-size: 0;
+		position: relative;
+		&::after{
+			content:"";
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border: 2px solid $grey-color-3;
+			border-radius: 50%;
+			position: absolute;
+			top: 50px;
+			left: 0;
+
+		}
+	}
+
+	&-description{
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 20px;
+		padding-top: 98px;
+		position: relative;
+		color: $text-color;
+		&::before{
+			content:"";
+			display: inline-block;
+			height: 2px;
+			width: 90%;
+			background: $grey-color-3;
+			position: absolute;
+			bottom: 85px;
+			left: 10px;
+		}
+	}
+
+	
+}
+.btn{
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 18px;
+	padding: 16px 61px;
+	background: $blue-color;
+	color: $white-color;
+	border-radius: 10px;
+	float: right;
+	margin-right: 125px;
+	&-wrap{
+		width: 100%;
+		&::before{
+			content:"";
+			display: inline-block;
+			height: 3px;
+			width: 65%;
+			background: $grey-color-2;
+			vertical-align: -15px;
+			margin-left: 130px;
+		}
+	}
+}
+
+
+.circle-edit{
+	&::after{
+		background: $blue-color;
+		content:"";
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		position: absolute;
+		left: 0;
+		top: 47px;
+	}
+	&::before{
+		background: $blue-color;
+		left: 15px;
+		width: 89%;
+	}
+}
+.circle-add{
+	&::after{
+		content:"";
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 2px solid $blue-color;
+		border-radius: 50%;
+		position: absolute;
+		left: -5px;
+  top: 92px;
+	}
+}
+
+.line{
+	&-two{
+		&::before{
+			animation: color-change 3s;
+		}
+	}
+	&-three{
+		&::before{
+			animation: color-change 2s 1s;
+		}
+	}
+	&-four{
+		&::before{
+			animation: color-change 1s 2s;
+		}
+	}
+	&-none{
+		&::before{
+			display: none;
+		}
+	}
+}
+
