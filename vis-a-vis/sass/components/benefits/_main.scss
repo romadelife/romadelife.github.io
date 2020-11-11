@@ -1,0 +1,116 @@
+.benefits{
+	background: $grey-color;
+	padding: 175px 0 150px;
+	margin-bottom: 300px;
+	position: relative;
+	&-inner{
+		@include site-width;
+	}
+	&-list{
+		display: flex;
+		flex-flow: row wrap;
+		margin-left: 130px;
+		margin-bottom: 14px;
+	}
+	&-items{
+		width: calc(100% / 3);
+		margin-bottom: 130px;
+	}
+	&-title{
+		font-size: 2.8rem;
+		font-weight: 700;
+		line-height: 33.6px;
+		color: $text-color;
+		width: 360px;
+		display: inline-block;
+		margin-bottom: 20px;
+		position: relative;
+		&::before{
+			content:"";
+			display: block;
+			height: 100px;
+			width: 100px;
+			background: $grey-color-1;
+			border-radius: 50%;
+			margin-bottom: 30px;
+		}
+	}
+	&-description{
+		font-size: 1.8rem;
+		font-weight: 300;
+		line-height: 25.2px;
+		color: $text-color;
+		width: 360px;
+		margin-bottom: 20px;
+	}
+	&-text{
+		font-size: 1.8rem;
+		font-weight: 300;
+		line-height: 30px;
+		color: $text-color;
+		width: 370px;
+		padding-left: 20px;
+		position: relative;
+		&::before{
+			content:"";
+			display: inline-block;
+			height: 8px;
+			width: 8px;
+			background: $blue-color;
+			border-radius: 50%;
+			transform: translateY(125%);
+			position: absolute;
+			left: 0;
+		}
+	}
+	&-aside{
+		padding: 108px 0;
+		background: $blue-color;
+		border-radius: 30px 0px 0px 30px;
+		position: absolute;
+		right: 0;
+		left: 325px;
+		bottom: -140px;
+	}
+	&-caption{
+		font-size: 3.2rem;
+		font-weight: 400;
+		line-height: 32px;
+		display: inline-block;
+		color: $white-color;
+		width: 190px;
+		margin-left: 285px;
+		position: relative;
+		&::before{
+			content:"";
+			display: inline-block;
+			height: 100px;
+			width: 100px;
+			background: rgba(249, 249, 249, 0.4);
+			border-radius: 50%;
+			position: absolute;
+			left: -130px;
+			top: -20px;
+		}
+	}
+}
+
+.rotation{
+	padding-top: 30px;
+	&::before{
+		height: 70px;
+		width: 70px;
+	}
+	&::after{
+		content:"";
+		display: block;
+		width: 120px;
+		height: 120px;
+		background: url(../img/ellipse.png) no-repeat center/cover;
+		position: absolute;
+		left: -25px;
+		top: 5px;
+		margin-bottom: 30px;
+		animation: rotation 5s infinite linear;
+	}
+}

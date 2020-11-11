@@ -1,0 +1,172 @@
+.order{
+	&-inner{
+		@include site-width;
+		padding-left: 130px;
+		&::after{
+			content: "";
+			display: block;
+			width: 100%;
+			clear: both;
+		}	
+	}
+	&-title{
+		font-size: 5rem;
+		font-weight: 700;
+		line-height: 50px;
+		color: $text-color;
+		width: 100%;
+		padding-right: 60%;
+		display: inline-block;
+		margin-bottom: 80px;
+	}
+	&-form{
+		display: inline-block;
+		width: 50%;
+	}
+	&-specification{
+		display: inline-block;
+		width: 50%;
+		float: right;
+		padding-left: 160px;
+	}
+}
+
+.form{
+	&-title{
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 30px;
+		color: $text-color;
+		width: 100%;
+		padding-right: 50%;
+		display: inline-block;
+		margin-bottom: 50px;
+	}
+	&-input{
+		padding: 0 0 10px;
+		margin: 0 0 10px 0;
+		border: none;
+		border-bottom: 1px solid $text-color;
+		position: relative;
+	}
+	&-btn{
+		margin: 0;
+		transform: translateY(-30%);
+	}
+}
+
+.input{
+	&-name{
+		font-size: 1.8rem;
+		font-weight: 400;
+		color: $grey-color-3;
+		position: absolute;
+		z-index: 1;
+	}
+	&-deco{
+		color: $blue-color;
+	}
+}
+
+#name{
+	width: 100%;
+	margin-bottom: 35px;
+}
+#phone{
+	width: 47%;
+	margin-right: 39px;
+}
+#mail{
+	width: 47%;
+}
+
+.error{
+	font-size: 1.2rem;
+	line-height: 12px;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 40px;
+	position: relative;
+}
+// custom checkbox
+.agreement{
+	position: absolute;
+  	z-index: -1;
+  	opacity: 0;
+	&-text{
+		font-size: 1.6rem;
+		font-weight: 400;
+		color: $text-color;
+		width: 50%;
+		display: inline-block;
+	}
+}
+.agreement+.agreement-text{
+	display: inline-flex;
+  	align-items: center;
+  	user-select: none;
+  	position: relative;
+  	&::before{
+  		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		flex-shrink: 0;
+		flex-grow: 0;
+		border: 1px solid $text-color;
+		border-radius: 50%;
+		margin-right: 7px;
+  	}
+  	&::after{
+  		content: '';
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background-color: $blue-color;
+		border-radius: 50%;
+		position: absolute;
+		left: 2px;
+		opacity: 0;
+  	}
+}
+.agreement:checked+.agreement-text::after{
+	opacity: 100;
+}
+
+.specification{
+	&-title{
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 30px;
+		color: $text-color;
+		display: inline-block;
+		width: 80%;
+		margin-bottom: 42px;
+	}
+	&-link{
+		font-size: 2.4rem;
+		font-weight: 700;
+		line-height: 24px;
+		display: inline-block;
+		width: 40%;
+		color: $blue-color;
+		margin-bottom: 66px;
+		position: relative;
+		&::after{
+			content:"";
+			display: block;
+			height: 1.5px;
+			width: 101%;
+			background: $blue-color;
+			position: absolute;
+			bottom: 1px;
+		}
+	}
+	&-text{
+		font-size: 1.6rem;
+		font-weight: 300;
+		line-height: 19.2px;
+		display: inline-block;
+		width: 66%;
+	}
+}

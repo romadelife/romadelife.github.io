@@ -1,0 +1,22 @@
+.footer{
+	&-links{
+		display: flex;
+		flex-flow:row wrap;
+		justify-content: space-between;
+		width: 50%;
+		margin-left: 280px;
+	}
+	&-list{
+		display: flex;
+		flex-flow: column wrap;
+		height: 200px;
+		justify-content: space-between;
+	}
+	&-link{
+		font-size: 24px;
+		color: $white-color;
+		&:hover{
+			color: $hover-color;
+		}
+	}
+}

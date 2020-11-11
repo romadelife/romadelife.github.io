@@ -1,0 +1,24 @@
+.social{
+	&-list{
+		display: flex;
+		justify-content: space-between; 
+		width: 240px;
+
+	}
+	&-link{
+		font-size: 0;
+		font-family: icomoon;
+	}
+}
+
+.footer{
+	&-social{
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-between;
+	}
+}
+.copyright{
+	font-size: 18px;
+	font-weight: 400;
+}

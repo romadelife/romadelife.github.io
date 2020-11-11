@@ -1,0 +1,73 @@
+.banner{
+	background:  url(../img/banner-bg.jpg) no-repeat 100% 0%/90% 700px $grey-color;
+	// position: relative;
+	&-inner{
+		@include site-width;
+		// display: flex;
+		// flex-flow: row wrap;
+	}
+	&-header{
+		font-size: 18rem;
+		font-weight: 700;
+		color: $text-color-1;
+		padding: 290px 0 0 130px;
+		line-height: 162px;
+		margin-bottom: 290px;
+	}
+	&-title{
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 48px;
+		color: $text-color;
+		margin-bottom: 20px;
+	}
+	&-description{
+		font-size: 1.8rem;
+		font-weight: 300;
+		line-height: 25.5px;
+		width: 490px;
+		color: $text-color;
+		margin-bottom: 95px;
+	}
+	&-btn{
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 18px;
+		background: $blue-color;
+		color: $white-color;
+		padding: 16px 95px;
+		border-radius: 10px;
+		margin-bottom: 184px;
+	}
+	&-list{
+		// padding-left: 60px;
+	}
+	&-items{
+		margin-bottom: 35px;
+		&:before{
+			content:"";
+			display: inline-block;
+			height: 54px;
+			width: 54px;
+			background: $grey-color-1;
+			border-radius: 50%;
+			margin-right: 36px;
+			transform: translateY(20%);
+		}
+	}
+	&-features{
+		font-size: 1.8rem;
+		font-weight: 700;
+		line-height: 21.6px;
+		width: 50%;
+		display: inline-block;
+		color: $text-color;
+	}
+	&-img{
+		margin: -60px;
+	}
+	&-wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+}

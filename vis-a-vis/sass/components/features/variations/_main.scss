@@ -1,0 +1,54 @@
+.variations{
+	&-img{
+		margin-left: -195px;
+		display: inline-block;
+	}
+	&-content{
+		display: inline-block;
+		margin-left: 160px;
+		position: absolute;
+		top: 0;
+	}
+	&-title{
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 36px;
+		color: $text-color;
+		width: 360px;
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+	&-description{
+		font-size: 1.8rem;
+		font-weight: 300;
+		line-height: 25.2px;
+		color: $text-color;
+		width: 490px;
+		margin-bottom: 66px;
+	}
+	&-list{
+		display: flex;
+		flex-flow: column wrap;
+		height: 150px;
+	}
+	&-items{
+		margin-bottom: 20px;
+	}
+	&-item{
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 20px;
+		color: $text-color;
+		padding-left: 30px;
+		&::before{
+			content:"";
+			display: inline-block;
+			height: 8px;
+			width: 8px;
+			background: $blue-color;
+			border-radius: 50%;
+			transform:translateY(-50%);
+			margin-right: 22px;
+		}
+	}
+}

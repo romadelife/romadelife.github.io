@@ -1,0 +1,5 @@
+/* Mixin library for general purposes */
+@mixin site-width($width: $global-site-width){
+    max-width: $width;
+    margin: 0 10%;
+}

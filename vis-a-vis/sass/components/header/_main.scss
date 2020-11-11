@@ -1,0 +1,26 @@
+.header{
+	height: 90px;
+	&-inner{
+		@include site-width;
+	}
+	&-list{
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+	&-item{
+		margin: 20px 50px 20px 0;
+
+	}
+	&-logo{
+		background: url(../img/logo.png) no-repeat center;
+	}
+	&-link{
+		font-size: 2.4rem;
+		font-weight: 300;
+		color: #4A4D4E;
+		&:hover{
+			color: #0093e6;
+		}
+	}
+}

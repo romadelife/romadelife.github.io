@@ -1,0 +1,35 @@
+.main{
+
+}
+.features{
+	padding-top: 200px;
+	position: relative;
+	background: url(../img/features-bg.jpg) no-repeat right 460px;
+	&-inner{
+		@include site-width;
+	}
+	&-slider{
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 76px;
+	}
+	&-advantages{
+	}
+	&-variations{
+		width: 100%;
+		margin-top: 121px;
+		position: relative;
+	}
+}
+
+
+.slider-header{
+	font-size: 5rem;
+	font-weight: 700;
+	line-height: 55px;
+	margin: 70px 116px 0 0;
+}
+
+@import "slider/main";
+@import "advantages/main";
+@import "variations/main";
