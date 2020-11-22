@@ -1,0 +1,4 @@
+@mixin site-width($width: $global-width) {
+    max-width: $width;
+    margin: 0 4%;
+}    

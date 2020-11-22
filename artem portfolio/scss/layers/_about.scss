@@ -1,0 +1,13 @@
+.about{
+	&-container{
+		background: #000;
+		border-radius: 20px;
+		margin-bottom: 50px;
+		padding: 26px;
+	}
+	&-content{
+		font-size: 18px;
+		font-weight: 500;
+		color: #fff;
+	}
+}
