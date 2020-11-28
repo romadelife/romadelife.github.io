@@ -1,0 +1,266 @@
+/*Reset*/
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+ul, li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family: Roboto, sans-serif;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Regular.eot");
+  src: url("../font/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Roboto-Regular.woff2") format("woff2"), url("../font/Roboto-Regular.woff") format("woff"), url("../font/Roboto-Regular.ttf") format("truetype"), url("../font/Roboto-Regular.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Medium.eot");
+  src: url("../font/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../font/Roboto-Medium.woff2") format("woff2"), url("../font/Roboto-Medium.woff") format("woff"), url("../font/Roboto-Medium.ttf") format("truetype"), url("../font/Roboto-Medium.svg#Roboto-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Black.eot");
+  src: url("../font/Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../font/Roboto-Black.woff2") format("woff2"), url("../font/Roboto-Black.woff") format("woff"), url("../font/Roboto-Black.ttf") format("truetype"), url("../font/Roboto-Black.svg#Roboto-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+.container{
+	background: url(../img/laptop-bg.png) no-repeat center/cover;
+	height: 100vh;
+	padding: 2% 5%;
+}
+.header{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 150px;
+}
+.number{
+	font-size: 25px;
+	font-weight: 700;
+	color: #fff;
+	padding-top: 10px;
+}
+.number::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: #fff;
+    transition: all 0.8s;
+}
+.number:hover::before{
+    transform: scaleX(1);
+}
+.number::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: #fff;
+    transition: all 0.8s;
+}
+.number:hover::after{
+    transform: scaleX(1);
+}
+.title{
+	font-size: 50px;
+	font-weight: 900;
+	color: #fff;
+	width: 35%;
+	margin-bottom: 50px;
+}
+.info{
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+	background: transparent;
+	border: 3px solid #fff;
+	padding: 5px 35px;
+	box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.25);
+	transition: 1s linear;
+}
+.info:hover{
+	box-shadow: -20px 20px 4px rgba(255, 255, 255, 0.25);
+	transition: 1s linear;
+}
+.modal {
+    position: fixed; /* фиксированное положение */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75); /* цвет фона */
+    z-index: 1050;
+    opacity: 0; /* по умолчанию модальное окно прозрачно */
+    -webkit-transition: opacity 200ms ease-in; 
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in; /* анимация перехода */
+    pointer-events: none; /* элемент невидим для событий мыши */
+    margin: 0;
+    padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+    opacity: 1; /* делаем окно видимым */
+	pointer-events: auto; /* элемент видим для событий мыши */
+    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+    position: relative;
+    /*width: auto;*/
+    margin: 10px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+      max-width: 700px;
+      margin: 90px auto; /* для отображения модального окна по центру */
+  }
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: 0;
+}
+@media (min-width: 768px) {
+  .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+      box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  }
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px 20px;
+    /*border-bottom: 1px solid #eceeef;*/
+}
+.modal-title {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 30px;
+    font-weight: 700;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+    float: right;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+    /*opacity: .5;*/
+    text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+    color: #FF0000;
+    text-decoration: none;
+    cursor: pointer;
+    /*opacity: .75;*/
+    font-weight: 700;
+    transform: scale(1.2);
+    transition: .6s linear;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    overflow: auto;
+}
+
+@media (max-width: 426px) {
+	.container{
+		background: url(../img/mobile-bg.jpg) no-repeat center/cover;
+	}
+	.number{
+		font-size: 20px;
+	}
+	.header{
+		margin-bottom: 60px;
+	}
+	.title{
+		float: right;
+		text-align: right;
+		width: 90%;
+		margin-bottom: 30px;
+	}
+	.info{
+		float: right;
+		font-size: 25px;
+		padding: 5px 15px;
+		color: #000;
+	}
+	.modal-dialog{
+		margin-top: 60px;
+	}
+	.modal-title{
+		font-size: 25px;
+	}
+	.close{
+		font-size: 40px;
+		padding-bottom: 5px;
+	}
+}
+@media (max-width: 321px) {
+	.header{
+		margin-bottom: 50px;
+	}
+	.number{
+		font-size: 18px;
+		padding-top: 12px;
+	}
+	.title{
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+	.info{
+		font-size: 18px;
+	}
+}
